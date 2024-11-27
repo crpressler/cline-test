@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  webpage-monitor:
+    build: .
+    volumes:
+      - ./state:/app/state
+      - ./changes:/app/changes
+    environment:
+      - WEBPAGE_URL=${WEBPAGE_URL:-https://example.com}
+    entrypoint: >
+      /bin/sh -c '
+      while true; do
+        python webpage_monitor.py $$WEBPAGE_URL;
+        echo "Waiting for next check...";
+        sleep ${CHECK_INTERVAL:-300};
+      done'
