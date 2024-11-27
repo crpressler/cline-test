@@ -1,10 +1,12 @@
 # AI-Generated Webpage Monitor
 
-This project was created entirely through interaction with the Cline AI assistant VSCode extension. It's a containerized Python application that monitors webpages for changes at regular intervals.
+This project was created entirely through interaction with the Cline AI assistant VSCode extension, powered by Claude 3.5 Sonnet through OpenRouter. It's a containerized Python application that monitors webpages for changes at regular intervals.
 
-## Creating This Project with Cline
+## Creating This Project with Cline and OpenRouter
 
-This entire project was developed through a conversation with the Cline AI assistant. Here's how the conversation flowed:
+This entire project was developed through a conversation with the Cline AI assistant, which uses OpenRouter to connect with Claude 3.5 Sonnet. OpenRouter provides a unified API for accessing various AI models, and in this case, it facilitated the interaction between the VSCode Cline extension and Claude 3.5 Sonnet, enabling a seamless development experience.
+
+Here's how the conversation flowed:
 
 1. Initial Request:
    ```
@@ -12,7 +14,7 @@ This entire project was developed through a conversation with the Cline AI assis
    ```
 
 2. Iterative Development:
-   - Cline first created a basic Python script with continuous monitoring
+   - Claude 3.5 Sonnet through Cline first created a basic Python script with continuous monitoring
    - When asked to modify it to run once and save state:
      ```
      instead of a python script that continuously runs I want it to only run once and save the state info to a file, then the next time it runs, compare the site to the previous state info. package this into a docker container so that it runs when the docker container is invoked.
@@ -28,16 +30,18 @@ This entire project was developed through a conversation with the Cline AI assis
 
 ### Reproducing This Project
 
-To recreate this project using Cline:
+To recreate this project:
 
 1. Install the Cline extension in VSCode
-2. Create a new directory for your project
-3. Open the command palette and start a conversation with Cline
-4. Follow the conversation flow above
-5. Cline will create each file and explain its purpose
-6. You can ask follow-up questions to modify or improve the implementation
+2. Configure Cline to use OpenRouter with Claude 3.5 Sonnet
+3. Create a new directory for your project
+4. Open the command palette and start a conversation with Cline
+5. Follow the conversation flow above
+6. Cline will create each file and explain its purpose
+7. You can ask follow-up questions to modify or improve the implementation
 
-The power of using Cline for development is that it:
+The power of using Cline with Claude 3.5 Sonnet through OpenRouter is that it:
+- Provides access to a powerful AI model through a simple interface
 - Understands the full context of your project
 - Can create and modify multiple files
 - Provides clear explanations of its actions
@@ -177,26 +181,26 @@ services:
       done'
 ```
 
-## Development Process with Cline
+## Development Process with Cline and Claude 3.5 Sonnet
 
-This project demonstrates the power of AI-assisted development through Cline. The development process was:
+This project demonstrates the power of AI-assisted development through Cline and OpenRouter. The development process was:
 
 1. Initial Requirements Phase:
    - Stated the basic need for a webpage monitor
-   - Cline created the initial Python script
+   - Claude 3.5 Sonnet created the initial Python script
 
 2. Iterative Improvement Phase:
    - Requested stateful operation instead of continuous running
-   - Cline refactored the script to use file-based state
+   - AI refactored the script to use file-based state
    - Added Docker containerization
    - Implemented scheduling through Docker Compose
 
 3. Documentation Phase:
    - Requested GitHub-ready documentation
-   - Cline generated comprehensive README
+   - AI generated comprehensive README
    - Added proper .gitignore configuration
 
-Each step was handled through natural conversation with Cline, which:
+Each step was handled through natural conversation with Claude 3.5 Sonnet via Cline, which:
 - Understood the context of previous changes
 - Made appropriate modifications across multiple files
 - Provided clear explanations of changes
@@ -227,3 +231,12 @@ The monitor includes robust error handling for:
 - Container operations
 
 Errors are logged clearly and the application fails gracefully when needed.
+
+## Technical Stack
+
+- AI Assistant: Claude 3.5 Sonnet
+- AI Platform: OpenRouter
+- IDE Integration: Cline VSCode Extension
+- Programming Language: Python 3.10
+- Containerization: Docker & Docker Compose
+- Version Control: Git
